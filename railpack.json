@@ -3,6 +3,12 @@
   "provider": "railway",
   "steps": {
     "install": {
+      "inputs": [
+        {
+          "local": true,
+          "include": ["website/**"]
+        }
+      ],
       "commands": ["cd website && npm install"]
     },
     "build": {
