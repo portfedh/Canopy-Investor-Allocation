@@ -1,0 +1,40 @@
+{
+  "_comment": "EDGE CASE: Iterative redistribution - one investor hits request cap",
+  "_explanation": [
+    "Total requested: 103 (100 + 2 + 1)",
+    "Allocation: 100",
+    "Sum of averages: 100 (95 + 1 + 4)",
+    "",
+    "FIRST PASS - naive pro-rata by average:",
+    "  A: 100 * (95/100) = 95 ✓ (under request of 100)",
+    "  B: 100 * (1/100) = 1 ✓ (under request of 2)",
+    "  C: 100 * (4/100) = 4 ✗ (exceeds request of 1)",
+    "",
+    "SECOND PASS - C is capped at 1, redistribute remaining 99:",
+    "  C gets: 1 (capped at request)",
+    "  Remaining: 99 to split between A and B",
+    "  New sum of averages: 96 (95 + 1)",
+    "  A: 99 * (95/96) = 97.96875",
+    "  B: 99 * (1/96) = 1.03125",
+    "",
+    "KEY INSIGHT: When pro-rata exceeds request, cap it and redistribute"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 95
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 2,
+      "average_amount": 1
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 1,
+      "average_amount": 4
+    }
+  ]
+}

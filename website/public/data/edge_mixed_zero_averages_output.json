@@ -1,0 +1,6 @@
+{
+  "_comment": "A gets capped at request. Remaining 50 split equally among zero-average investors B and C.",
+  "Investor A": 50,
+  "Investor B": 25,
+  "Investor C": 25
+}

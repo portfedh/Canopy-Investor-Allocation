@@ -1,0 +1,29 @@
+{
+  "_comment": "EDGE CASE: All investors request less than allocation",
+  "_explanation": [
+    "Total requested: 75 (30 + 25 + 20)",
+    "Allocation: 150",
+    "Since 150 > 75, everyone gets exactly what they requested",
+    "Unused allocation: 75",
+    "Similar to simple_2 but tests with multiple investors requesting less",
+    "Averages are irrelevant when allocation exceeds total demand"
+  ],
+  "allocation_amount": 150,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 30,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 25,
+      "average_amount": 80
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 20,
+      "average_amount": 60
+    }
+  ]
+}

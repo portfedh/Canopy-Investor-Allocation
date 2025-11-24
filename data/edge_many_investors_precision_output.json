@@ -1,0 +1,13 @@
+{
+  "_comment": "Pro-rata split among 10 investors. Sum should equal exactly 100.0",
+  "Investor A": 18.181818181818183,
+  "Investor B": 16.363636363636363,
+  "Investor C": 14.545454545454545,
+  "Investor D": 12.727272727272727,
+  "Investor E": 10.909090909090908,
+  "Investor F": 9.090909090909092,
+  "Investor G": 7.2727272727272725,
+  "Investor H": 5.454545454545454,
+  "Investor I": 3.6363636363636362,
+  "Investor J": 1.8181818181818181
+}

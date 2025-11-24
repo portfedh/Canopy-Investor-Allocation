@@ -1,0 +1,6 @@
+{
+  "_comment": "When all averages are zero, split allocation equally among investors (100/3 each)",
+  "Investor A": 33.333333333333336,
+  "Investor B": 33.333333333333336,
+  "Investor C": 33.333333333333336
+}

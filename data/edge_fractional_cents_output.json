@@ -1,0 +1,6 @@
+{
+  "_comment": "Cent-rounded allocation. A and B get $0.33, C gets $0.34 (extra penny). Sum = $1.00 exactly.",
+  "Investor A": 0.33,
+  "Investor B": 0.33,
+  "Investor C": 0.34
+}

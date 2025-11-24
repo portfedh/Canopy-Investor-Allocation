@@ -1,0 +1,31 @@
+{
+  "_comment": "EDGE CASE: Investors requesting significantly less than their average",
+  "_explanation": [
+    "All investors request less than their historical averages",
+    "Total requested: 60 (20 + 20 + 20)",
+    "Allocation: 100",
+    "Sum of averages: 300 (100 + 100 + 100)",
+    "",
+    "Since 100 > 60, everyone gets what they requested",
+    "Tests scenario where investors are more conservative than usual",
+    "Important: requested amount is the hard cap, regardless of average"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 20,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 20,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 20,
+      "average_amount": 100
+    }
+  ]
+}

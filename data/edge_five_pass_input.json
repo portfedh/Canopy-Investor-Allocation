@@ -1,0 +1,45 @@
+{
+  "_comment": "EDGE CASE: Five-pass iterative redistribution - extreme cascading",
+  "_explanation": [
+    "Total requested: 216 (30 + 18 + 10 + 8 + 150)",
+    "Allocation: 100",
+    "Sum of averages: 225 (100 + 60 + 35 + 20 + 10)",
+    "",
+    "Result after five redistribution passes:",
+    "  A: 30 (capped at request)",
+    "  B: 18 (capped at request)",
+    "  C: 10 (capped at request)",
+    "  D: 8 (capped at request)",
+    "  E: 34 (absorbs final remainder)",
+    "",
+    "Tests: Most complex redistribution - each investor A-D caps sequentially across 5 passes"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 30,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 18,
+      "average_amount": 60
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 10,
+      "average_amount": 35
+    },
+    {
+      "name": "Investor D",
+      "requested_amount": 8,
+      "average_amount": 20
+    },
+    {
+      "name": "Investor E",
+      "requested_amount": 150,
+      "average_amount": 10
+    }
+  ]
+}

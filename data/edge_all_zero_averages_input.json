@@ -1,0 +1,35 @@
+{
+  "_comment": "EDGE CASE: All investors have zero historical average",
+  "_explanation": [
+    "Total requested: 300 (100 + 100 + 100)",
+    "Allocation: 100",
+    "Sum of averages: 0 (0 + 0 + 0)",
+    "",
+    "All investors are new with no investment history",
+    "Cannot allocate pro-rata when all averages are zero (division by zero)",
+    "Result: Equal split among all investors",
+    "  A: 33.33...",
+    "  B: 33.33...",
+    "  C: 33.33...",
+    "",
+    "Tests: Division by zero handling when no historical data exists"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 0
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 100,
+      "average_amount": 0
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 100,
+      "average_amount": 0
+    }
+  ]
+}

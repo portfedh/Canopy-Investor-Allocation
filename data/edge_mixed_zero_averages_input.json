@@ -1,0 +1,34 @@
+{
+  "_comment": "EDGE CASE: Mix of zero and non-zero historical averages",
+  "_explanation": [
+    "Total requested: 150 (50 + 50 + 50)",
+    "Allocation: 100",
+    "Sum of averages: 100 (100 + 0 + 0)",
+    "",
+    "Investors B and C are new with no investment history",
+    "Result: A capped at 50, remaining 50 split equally among zero-average investors",
+    "  A: 50",
+    "  B: 25",
+    "  C: 25",
+    "",
+    "Tests: Handling new investors without historical data alongside existing investors"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 50,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 50,
+      "average_amount": 0
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 50,
+      "average_amount": 0
+    }
+  ]
+}

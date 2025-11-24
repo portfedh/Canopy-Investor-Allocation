@@ -1,0 +1,64 @@
+{
+  "_comment": "EDGE CASE: Three-pass iterative redistribution - cascading caps",
+  "_explanation": [
+    "Total requested: 275 (40 + 20 + 15 + 200)",
+    "Allocation: 100",
+    "Sum of averages: 200 (100 + 50 + 30 + 20)",
+    "",
+    "PASS 1 - Initial pro-rata allocation by averages:",
+    "  Sum of all averages: 200",
+    "  A: 100 * (100/200) = 50 → EXCEEDS request of 40 ✗",
+    "  B: 100 * (50/200) = 25 → EXCEEDS request of 20 ✗",
+    "  C: 100 * (30/200) = 15 → exactly at request ✓",
+    "  D: 100 * (20/200) = 10 → under request of 200 ✓",
+    "  → A and B exceed requests, must cap and redistribute",
+    "",
+    "PASS 2 - Cap A and B, redistribute remainder to C and D:",
+    "  A: 40 (capped at request)",
+    "  B: 20 (capped at request)",
+    "  Used so far: 60",
+    "  Remaining to allocate: 40",
+    "  Sum of averages for C and D: 50 (30 + 20)",
+    "  C: 40 * (30/50) = 24 → EXCEEDS request of 15 ✗",
+    "  D: 40 * (20/50) = 16 → under request of 200 ✓",
+    "  → C exceeds request, must cap and redistribute again",
+    "",
+    "PASS 3 - Cap C, give remainder to D:",
+    "  A: 40 (capped)",
+    "  B: 20 (capped)",
+    "  C: 15 (capped at request)",
+    "  Used so far: 75",
+    "  Remaining to allocate: 25",
+    "  Only D has headroom, gets all remaining",
+    "  D: 25 (under request of 200) ✓",
+    "",
+    "FINAL ALLOCATION:",
+    "  A: 40, B: 20, C: 15, D: 25",
+    "  Total: 100 ✓",
+    "",
+    "Tests: Algorithm handles sequential capping across three rounds"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 40,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 20,
+      "average_amount": 50
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 15,
+      "average_amount": 30
+    },
+    {
+      "name": "Investor D",
+      "requested_amount": 200,
+      "average_amount": 20
+    }
+  ]
+}

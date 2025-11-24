@@ -1,0 +1,33 @@
+{
+  "_comment": "EDGE CASE: Zero allocation amount",
+  "_explanation": [
+    "Total requested: 200 (100 + 50 + 50)",
+    "Allocation: 0",
+    "Sum of averages: 150 (100 + 25 + 25)",
+    "",
+    "Result: All investors receive zero (nothing to distribute)",
+    "  A: 0",
+    "  B: 0",
+    "  C: 0",
+    "",
+    "Tests: Handling when no allocation is available"
+  ],
+  "allocation_amount": 0,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 50,
+      "average_amount": 25
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 50,
+      "average_amount": 25
+    }
+  ]
+}

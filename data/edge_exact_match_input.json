@@ -1,0 +1,23 @@
+{
+  "_comment": "EDGE CASE: Total requested exactly matches allocation",
+  "_explanation": [
+    "Total requested: 100 (60 + 40)",
+    "Allocation: 100",
+    "Since they match exactly, everyone gets what they requested",
+    "No proration needed",
+    "Tests boundary condition where allocation == sum of requests"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 60,
+      "average_amount": 50
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 40,
+      "average_amount": 30
+    }
+  ]
+}

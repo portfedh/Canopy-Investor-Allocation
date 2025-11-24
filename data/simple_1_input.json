@@ -1,0 +1,25 @@
+{
+  "_comment": "EDGE CASE: Basic proration - allocation < sum of requests",
+  "_explanation": [
+    "Total requested: 125 (100 + 25)",
+    "Allocation available: 100",
+    "Since 100 < 125, we need to prorate based on average amounts",
+    "Sum of averages: 125 (100 + 25)",
+    "Investor A: 100 * (100 / 125) = 80",
+    "Investor B: 100 * (25 / 125) = 20",
+    "Total allocated: 100 (no waste)"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 25,
+      "average_amount": 25
+    }
+  ]
+}

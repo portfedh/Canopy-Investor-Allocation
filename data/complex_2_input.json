@@ -1,0 +1,40 @@
+{
+  "_comment": "EDGE CASE: Multiple investors hit request caps - single investor absorbs remainder",
+  "_explanation": [
+    "Total requested: 102 (100 + 1 + 1)",
+    "Allocation: 100",
+    "Sum of averages: 100 (95 + 1 + 4)",
+    "",
+    "FIRST PASS - naive pro-rata by average:",
+    "  A: 100 * (95/100) = 95 ✓ (under request of 100)",
+    "  B: 100 * (1/100) = 1 ✓ (exactly at request of 1)",
+    "  C: 100 * (4/100) = 4 ✗ (exceeds request of 1)",
+    "",
+    "SECOND PASS - both B and C capped, A absorbs remainder:",
+    "  B gets: 1 (at request cap)",
+    "  C gets: 1 (at request cap)",
+    "  Remaining: 98 to allocate",
+    "  Only A has room, A gets: 98 (still under request of 100)",
+    "",
+    "KEY INSIGHT: When multiple investors cap out, remainder goes to those with headroom",
+    "This tests algorithm's ability to handle multiple simultaneous caps"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 95
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 1,
+      "average_amount": 1
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 1,
+      "average_amount": 4
+    }
+  ]
+}

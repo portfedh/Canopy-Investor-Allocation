@@ -1,0 +1,6 @@
+{
+  "_comment": "Small decimal proration - tests floating point precision handling",
+  "Investor A": 0.5555555555555556,
+  "Investor B": 0.27777777777777773,
+  "Investor C": 0.16666666666666666
+}

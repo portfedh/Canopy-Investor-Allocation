@@ -1,0 +1,6 @@
+{
+  "_comment": "Zero allocation means everyone gets zero",
+  "Investor A": 0,
+  "Investor B": 0,
+  "Investor C": 0
+}

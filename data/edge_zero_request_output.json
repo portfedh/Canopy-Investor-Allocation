@@ -1,0 +1,5 @@
+{
+  "_comment": "Zero-request investor gets 0, other investor gets their request",
+  "Investor A": 0,
+  "Investor B": 75
+}

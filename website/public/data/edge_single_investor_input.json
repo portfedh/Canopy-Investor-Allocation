@@ -1,0 +1,19 @@
+{
+  "_comment": "EDGE CASE: Single investor - should get min(allocation, requested)",
+  "_explanation": [
+    "Only one investor in the pool",
+    "Requested: 75",
+    "Allocation: 100",
+    "Since 100 > 75, investor gets exactly what they requested: 75",
+    "No proration needed, no other investors to compete with",
+    "Tests algorithm handles single-investor scenario correctly"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 75,
+      "average_amount": 50
+    }
+  ]
+}

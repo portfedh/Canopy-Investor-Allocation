@@ -1,0 +1,19 @@
+{
+  "_comment": "EDGE CASE: Single investor requesting more than allocation",
+  "_explanation": [
+    "Only one investor",
+    "Requested: 150",
+    "Allocation: 100",
+    "Investor gets capped at allocation: 100",
+    "Tests that even with one investor, we respect allocation limit",
+    "Average amount is irrelevant when there's only one investor"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 150,
+      "average_amount": 200
+    }
+  ]
+}

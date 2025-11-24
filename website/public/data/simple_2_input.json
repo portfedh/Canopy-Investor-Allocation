@@ -1,0 +1,23 @@
+{
+  "_comment": "EDGE CASE: No proration needed - allocation >= sum of requests",
+  "_explanation": [
+    "Total requested: 125 (100 + 25)",
+    "Allocation available: 200",
+    "Since 200 >= 125, everyone gets exactly what they requested",
+    "No proration calculation needed",
+    "Unused allocation: 75 (acceptable per requirements - no investor wants it)"
+  ],
+  "allocation_amount": 200,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 25,
+      "average_amount": 25
+    }
+  ]
+}

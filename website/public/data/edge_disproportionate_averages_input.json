@@ -1,0 +1,36 @@
+{
+  "_comment": "EDGE CASE: Highly disproportionate historical averages",
+  "_explanation": [
+    "Investor A has huge average (1000) vs B and C (10 each)",
+    "Total requested: 150 (100 + 25 + 25)",
+    "Allocation: 100",
+    "Sum of averages: 1020 (1000 + 10 + 10)",
+    "",
+    "FIRST PASS - pro-rata by average:",
+    "  A: 100 * (1000/1020) = 98.039... ✓ (under request of 100)",
+    "  B: 100 * (10/1020) = 0.980... ✓ (under request of 25)",
+    "  C: 100 * (10/1020) = 0.980... ✓ (under request of 25)",
+    "",
+    "All fit within requests, so this is the final allocation",
+    "Tests that algorithm handles large disparities in averages",
+    "Whale investor gets proportionally large share based on history"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 100,
+      "average_amount": 1000
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 25,
+      "average_amount": 10
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 25,
+      "average_amount": 10
+    }
+  ]
+}

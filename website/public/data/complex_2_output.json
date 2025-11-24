@@ -1,0 +1,6 @@
+{
+  "_comment": "Multiple investors capped. A receives all remaining allocation since only A has headroom.",
+  "Investor A": 98,
+  "Investor B": 1,
+  "Investor C": 1
+}

@@ -1,0 +1,5 @@
+{
+  "_comment": "Simple pro-rata distribution: each investor gets allocation * (their_avg / sum_of_avgs)",
+  "Investor A": 80,
+  "Investor B": 20
+}

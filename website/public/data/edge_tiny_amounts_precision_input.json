@@ -1,0 +1,35 @@
+{
+  "_comment": "EDGE CASE: Very small amounts testing floating point precision",
+  "_explanation": [
+    "Tests algorithm handles small fractional amounts correctly",
+    "Total requested: 1.5 (1.0 + 0.3 + 0.2)",
+    "Allocation: 1.0",
+    "Sum of averages: 0.9 (0.5 + 0.25 + 0.15)",
+    "",
+    "FIRST PASS - pro-rata:",
+    "  A: 1.0 * (0.5/0.9) = 0.5556 ✓",
+    "  B: 1.0 * (0.25/0.9) = 0.2778 ✓",
+    "  C: 1.0 * (0.15/0.9) = 0.1667 ✓",
+    "",
+    "All under requests, simple proration works",
+    "Tests precision with small decimals and rounding"
+  ],
+  "allocation_amount": 1.0,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 1.0,
+      "average_amount": 0.5
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 0.3,
+      "average_amount": 0.25
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 0.2,
+      "average_amount": 0.15
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "_comment": "EDGE CASE: Multiple investors hit caps simultaneously in first pass",
+  "_explanation": [
+    "Total requested: 160 (25 + 20 + 15 + 100)",
+    "Allocation: 100",
+    "Sum of averages: 200 (80 + 60 + 40 + 20)",
+    "",
+    "Result: Three investors (A, B, C) all exceed requests in first pass",
+    "  A: 25 (capped)",
+    "  B: 20 (capped)",
+    "  C: 15 (capped)",
+    "  D: 40 (absorbs remainder)",
+    "",
+    "Tests: Multiple simultaneous caps in same iteration (not sequential)"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 25,
+      "average_amount": 80
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 20,
+      "average_amount": 60
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 15,
+      "average_amount": 40
+    },
+    {
+      "name": "Investor D",
+      "requested_amount": 100,
+      "average_amount": 20
+    }
+  ]
+}

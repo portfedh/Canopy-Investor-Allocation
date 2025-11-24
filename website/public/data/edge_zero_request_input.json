@@ -1,0 +1,25 @@
+{
+  "_comment": "EDGE CASE: One investor requests zero",
+  "_explanation": [
+    "Investor A requests 0",
+    "Investor B requests 75",
+    "Allocation: 100",
+    "A should receive 0 (requested nothing)",
+    "B should receive 75 (gets what they requested, allocation is sufficient)",
+    "Tests handling of zero-request investors",
+    "Zero-request investors shouldn't participate in proration"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 0,
+      "average_amount": 100
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 75,
+      "average_amount": 50
+    }
+  ]
+}

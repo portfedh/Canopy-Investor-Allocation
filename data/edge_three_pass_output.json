@@ -1,0 +1,7 @@
+{
+  "_comment": "Three-pass result: A, B, C all hit caps sequentially, D absorbs remainder",
+  "Investor A": 40,
+  "Investor B": 20,
+  "Investor C": 15,
+  "Investor D": 25
+}

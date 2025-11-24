@@ -1,0 +1,66 @@
+{
+  "_comment": "EDGE CASE: Many investors with small amounts - precision test",
+  "_explanation": [
+    "Total requested: 500 (10 * 50)",
+    "Allocation: 100",
+    "Sum of averages: 55 (10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1)",
+    "",
+    "Result: Pro-rata allocation among 10 investors based on averages",
+    "All allocations under requests, sum must equal exactly 100.0",
+    "",
+    "Tests: Floating point precision with multiple divisions, no rounding error accumulation"
+  ],
+  "allocation_amount": 100,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 50,
+      "average_amount": 10
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 50,
+      "average_amount": 9
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 50,
+      "average_amount": 8
+    },
+    {
+      "name": "Investor D",
+      "requested_amount": 50,
+      "average_amount": 7
+    },
+    {
+      "name": "Investor E",
+      "requested_amount": 50,
+      "average_amount": 6
+    },
+    {
+      "name": "Investor F",
+      "requested_amount": 50,
+      "average_amount": 5
+    },
+    {
+      "name": "Investor G",
+      "requested_amount": 50,
+      "average_amount": 4
+    },
+    {
+      "name": "Investor H",
+      "requested_amount": 50,
+      "average_amount": 3
+    },
+    {
+      "name": "Investor I",
+      "requested_amount": 50,
+      "average_amount": 2
+    },
+    {
+      "name": "Investor J",
+      "requested_amount": 50,
+      "average_amount": 1
+    }
+  ]
+}

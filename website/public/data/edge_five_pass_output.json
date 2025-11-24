@@ -1,0 +1,8 @@
+{
+  "_comment": "Five-pass cascading redistribution. Each investor A-D hits cap sequentially, E absorbs all remainder.",
+  "Investor A": 30,
+  "Investor B": 18,
+  "Investor C": 10,
+  "Investor D": 8,
+  "Investor E": 34
+}

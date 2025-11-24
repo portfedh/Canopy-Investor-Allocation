@@ -1,0 +1,35 @@
+{
+  "_comment": "EDGE CASE: Cent-rounding logic for real currency systems",
+  "_explanation": [
+    "Total requested: 30 (10 + 10 + 10)",
+    "Allocation: 1.00",
+    "Sum of averages: 30 (10 + 10 + 10)",
+    "",
+    "Raw calculation: $1 / 3 = $0.333... each",
+    "Result with cent-rounding:",
+    "  A: $0.33 (rounded down)",
+    "  B: $0.33 (rounded down)",
+    "  C: $0.34 (gets extra penny to ensure sum = $1.00)",
+    "",
+    "Tests: Proper cent-rounding and remainder distribution",
+    "Algorithm must handle 'dust' (fractional cents) to ensure exact total"
+  ],
+  "allocation_amount": 1,
+  "investor_amounts": [
+    {
+      "name": "Investor A",
+      "requested_amount": 10,
+      "average_amount": 10
+    },
+    {
+      "name": "Investor B",
+      "requested_amount": 10,
+      "average_amount": 10
+    },
+    {
+      "name": "Investor C",
+      "requested_amount": 10,
+      "average_amount": 10
+    }
+  ]
+}

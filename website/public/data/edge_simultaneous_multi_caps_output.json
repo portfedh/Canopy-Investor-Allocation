@@ -1,0 +1,7 @@
+{
+  "_comment": "Three investors (A, B, C) all hit caps in first pass. D absorbs all remaining allocation.",
+  "Investor A": 25,
+  "Investor B": 20,
+  "Investor C": 15,
+  "Investor D": 40
+}
