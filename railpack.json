@@ -2,23 +2,11 @@
   "$schema": "https://schema.railpack.com",
   "steps": {
     "install": {
-      "commands": [
-        {
-          "cmd": "cd website && npm install"
-        }
-      ]
+      "commands": ["cd website && npm install"]
     },
     "build": {
-      "inputs": [
-        {
-          "step": "install"
-        }
-      ],
-      "commands": [
-        {
-          "cmd": "cd website && npm run build"
-        }
-      ],
+      "inputs": [{ "step": "install" }],
+      "commands": ["cd website && npm run build"],
       "deployOutputs": ["website/dist/**"]
     }
   },
