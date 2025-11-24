@@ -1,0 +1,10 @@
+{
+  "name": "canopy-interview-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd website && npm install && npm run build",
+    "start": "cd website && npm run preview -- --port ${PORT:-5173} --host 0.0.0.0",
+    "dev": "cd website && npm run dev"
+  }
+}
