@@ -1,5 +1,6 @@
 {
   "$schema": "https://schema.railpack.com",
+  "provider": "railway",
   "steps": {
     "install": {
       "commands": ["cd website && npm install"]
@@ -7,7 +8,11 @@
     "build": {
       "inputs": [{ "step": "install" }],
       "commands": ["cd website && npm run build"],
-      "deployOutputs": ["website/dist/**"]
+      "deployOutputs": [
+        {
+          "include": ["website/dist/**"]
+        }
+      ]
     }
   },
   "deploy": {
