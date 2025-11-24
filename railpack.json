@@ -9,7 +9,11 @@
       ]
     },
     "build": {
-      "inputs": ["install"],
+      "inputs": [
+        {
+          "step": "install"
+        }
+      ],
       "commands": [
         {
           "cmd": "cd website && npm run build"
