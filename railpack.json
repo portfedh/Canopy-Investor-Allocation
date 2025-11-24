@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "steps": [
+    {
+      "name": "install",
+      "commands": [
+        {
+          "cmd": "cd website && npm install"
+        }
+      ]
+    },
+    {
+      "name": "build",
+      "inputs": ["install"],
+      "commands": [
+        {
+          "cmd": "cd website && npm run build"
+        }
+      ],
+      "deployOutputs": ["website/dist/**"]
+    }
+  ],
+  "deploy": {
+    "startCommand": "cd website && npm run preview -- --port $PORT --host 0.0.0.0"
+  }
+}
